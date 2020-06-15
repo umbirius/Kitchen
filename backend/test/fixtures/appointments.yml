@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  when: 2020-06-14 21:03:27
+  establishment_id: 1
+  type: 
+  user_id_one: 1
+  user_id_two: 1
+  code_word: MyString
+
+two:
+  when: 2020-06-14 21:03:27
+  establishment_id: 1
+  type: 
+  user_id_one: 1
+  user_id_two: 1
+  code_word: MyString
