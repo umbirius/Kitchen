@@ -17,3 +17,14 @@ csv.each do |row|
     u.interests = row['Interests']
     u.save
 end 
+
+
+csv_text = File.read(Rails.root.join('lib/establishment_seed.csv'))
+csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+csv.each do |row|
+    e = Establishment.new 
+    e.name = row['name']
+    e.genre = row['genre']
+    e.drinks = row['drinks']
+    e.save
+end 
