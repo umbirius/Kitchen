@@ -1,4 +1,4 @@
 class EstablishmentSerializer
   include FastJsonapi::ObjectSerializer
-  attributes 
+  attributes :id, :name, :genre, :drinks
 end
