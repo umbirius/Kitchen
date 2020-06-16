@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'csv' 
+
+csv_text = File.read(Rails.root.join('lib/user_seed.csv'))
+csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+csv.each do |row|
+    u = User.new 
+    u.username = row['Username']
+    u.gender = row['Gender']
+    u.interests = row['Interests']
+    u.save
+end 
