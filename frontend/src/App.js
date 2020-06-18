@@ -8,24 +8,31 @@ import { fetchEstablishments } from './actions/fetchEstablishments'
 
 class App extends Component {
 
+
   componentDidMount() {
+
+    console.log(this.props)
     this.props.fetchEstablishments()
+  
+
   }
 
   render() {
+    console.log(this.props.establishemnts)
     return (
       <div className="User-form">
         <UserContainer />
-        <EstablishmentContainer />
+        <EstablishmentContainer establishments = {this.props.establishemnts}/>
       </div >
     );
   }
 
 }
 
+
 const mapStateToProps = state => {
   return {
-    establishemnts: state.establishments,
+    establishments: state.establishments,
     loading: state.loading
   }
 }
@@ -35,5 +42,6 @@ const mapDispatchToProps = dispatch => {
     fetchEstablishments: () => dispatch(fetchEstablishments())
   }
 }
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

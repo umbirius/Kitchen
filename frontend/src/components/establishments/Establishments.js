@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-import EstablishmentContainer from '../../containers/EstablishmentContainer'
+import Establishment from './Establishment'
 // import unit component Establishment, will want to render on click 
 
 class Establishments extends Component {
     render() {
+        debugger
         return (
         <div>
-            Establishments
+            {/* {this.props.establishments.map(e => <Establishment e.name =this.props.establishment.name/>)} */}
         </div>
     )
     }

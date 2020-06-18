@@ -8,7 +8,7 @@ class EstablishmentContainer extends Component {
     render() {
         return (
             <div>
-                <Establishments/>
+                <Establishments establishments={this.props.establishments}/>
             </div>)
     }
 }
