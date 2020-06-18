@@ -6,5 +6,4 @@ class UsersController < ApplicationController
     render json: UserSerializer.new(users)
   end
 
-  
 end
