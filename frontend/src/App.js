@@ -3,17 +3,37 @@ import logo from './logo.svg';
 import './App.css';
 import UserContainer from './containers/UserContainer.js'
 import EstablishmentContainer from './containers/EstablishmentContainer';
+import { connect } from 'react-redux'
+import { fetchEstablishments } from './actions/fetchEstablishments'
 
 class App extends Component {
+
+  componentDidMount() {
+    this.props.fetchEstablishments()
+  }
+
   render() {
-  return (
-    <div className="User-form">
-      <UserContainer />
-      <EstablishmentContainer />
-    </div >
-  );
+    return (
+      <div className="User-form">
+        <UserContainer />
+        <EstablishmentContainer />
+      </div >
+    );
   }
 
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    establishemnts: state.establishments,
+    loading: state.loading
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchEstablishments: () => dispatch(fetchEstablishments())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
