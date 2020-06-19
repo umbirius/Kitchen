@@ -4,10 +4,10 @@ import Establishment from './Establishment'
 
 class Establishments extends Component {
     render() {
-        debugger
+        console.log(this.props)
         return (
         <div>
-            {/* {this.props.establishments.map(e => <Establishment e.name =this.props.establishment.name/>)} */}
+            {/* {this.props.establishments.map( e => <Establishment name = {e..name}/>)} */}
         </div>
     )
     }

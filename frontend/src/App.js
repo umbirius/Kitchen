@@ -10,15 +10,11 @@ class App extends Component {
 
 
   componentDidMount() {
-
-    console.log(this.props)
     this.props.fetchEstablishments()
-  
-
   }
 
   render() {
-    console.log(this.props.establishemnts)
+    console.log(this.props.establishments)
     return (
       <div className="User-form">
         <UserContainer />

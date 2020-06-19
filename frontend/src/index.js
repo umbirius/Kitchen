@@ -7,9 +7,10 @@ import manageUsers from './reducers/manageUsers'
 
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
+import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
 
-const store = createStore(manageUsers, applyMiddleware(thunk));
+const store = createStore(manageUsers, composeWithDevTools(applyMiddleware(thunk)));
 
 
 // ReactDOM.render(

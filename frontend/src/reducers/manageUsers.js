@@ -9,7 +9,6 @@ export default function manageUsers(state = {
 }, action) {
     switch (action.type) {
         case 'ADD_USER':
-            debugger
             const user = { username: action.user.text, gender: action.user.gender, interests: action.user.text, id: cuid() }
             return { ...state, users: [...state.users, user] }
 
@@ -23,12 +22,13 @@ export default function manageUsers(state = {
                 loading: true
             }
         case 'ADD_ESTABLISHMENTS':
+            debugger
             return {
                 ...state,
                 establishments: action.establishments,
                 loading: false
             }
-            
+
         default:
             return state;
     }

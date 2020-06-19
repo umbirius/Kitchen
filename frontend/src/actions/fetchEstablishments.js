@@ -4,7 +4,7 @@ export const fetchEstablishments = () => {
         fetch('http://localhost:3000/establishments')
             .then(response => response.json())
             .then(establishments => {
-                dispatch({ type: 'ADD_ESTABLISHMENTS', establishments: establishments})
+                dispatch({ type: 'ADD_ESTABLISHMENTS', establishments: establishments.data.map(e => e.attributes)})
             })
     }
 }
