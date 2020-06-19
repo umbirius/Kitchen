@@ -8,8 +8,12 @@ class Establishment extends Component {
     // }
 
     render() {
+        const e = this.props
         return (
-            <div>Establishment</div>
+            <div key={e.key} >
+                <li>{e.name} - {e.genre} - {e.drinks}</li>
+
+            </div>
         )
     }
 }

@@ -14,11 +14,10 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.props.establishments)
     return (
       <div className="User-form">
         <UserContainer />
-        <EstablishmentContainer establishments = {this.props.establishemnts}/>
+        <EstablishmentContainer establishments = {this.props.establishments}/>
       </div >
     );
   }

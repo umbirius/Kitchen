@@ -6,9 +6,11 @@ import Establishments from '../components/establishments/Establishments'
 class EstablishmentContainer extends Component {
 
     render() {
+        console.log("Establishments Container:")
+        console.log(this.props.establishments)
         return (
             <div>
-                <Establishments establishments={this.props.establishments}/>
+                <Establishments establishments={this.props.establishments} />
             </div>)
     }
 }

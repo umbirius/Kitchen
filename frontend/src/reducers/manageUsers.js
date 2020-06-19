@@ -22,7 +22,6 @@ export default function manageUsers(state = {
                 loading: true
             }
         case 'ADD_ESTABLISHMENTS':
-            debugger
             return {
                 ...state,
                 establishments: action.establishments,
