@@ -15,6 +15,19 @@ export default function manageUsers(state = {
         case 'DELETE_USER':
             return { ...state, users: state.users.filter(user => user.id !== action.id) }
 
+        case 'LOAD_USERS':
+            return {
+                ...state,
+                users: [...state.users],
+                loading: true
+            }
+        case 'ADD_USERS':
+            return {
+                ...state,
+                users: action.users,
+                loading: false
+            }
+
         case 'LOAD_DATE_SPOTS':
             return {
                 ...state,
