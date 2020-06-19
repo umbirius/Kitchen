@@ -22,9 +22,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className="User-form">
+      <div>
         <UserContainer />
-        <EstablishmentContainer establishments = {this.props.establishments}/>
+        {/* <EstablishmentContainer establishments = {this.props.establishments}/> */}
       </div >
     );
   }

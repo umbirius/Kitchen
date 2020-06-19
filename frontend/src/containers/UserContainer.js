@@ -6,7 +6,7 @@ class UserContainer extends Component {
 
     render() {
         return (
-            <div>
+            <div class="log-in-sign-up">
                 <UserForm addUser={this.props.addUser}/>
             </div>)
     }
