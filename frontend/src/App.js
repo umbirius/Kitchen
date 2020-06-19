@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import UserContainer from './containers/UserContainer.js'
 import EstablishmentContainer from './containers/EstablishmentContainer';
 import { connect } from 'react-redux'
 import { fetchEstablishments } from './actions/fetchEstablishments'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams
+} from "react-router-dom";
 
 class App extends Component {
 

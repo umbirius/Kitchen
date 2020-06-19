@@ -10,7 +10,7 @@ class Establishment extends Component {
     render() {
         const e = this.props
         return (
-            <div key={e.key} >
+            <div key={e.id} >
                 <li>{e.name} - {e.genre} - {e.drinks}</li>
 
             </div>
