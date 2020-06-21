@@ -15,15 +15,17 @@ import {
 
 class App extends Component {
 
+  state = {
+    current_user: ''
+  }
 
   componentDidMount() {
     this.props.fetchUsers()
   }
 
   render() {
-    return (
-      <div>
-        
+    if (this.state.current_user === '') {
+      return (
         <Router>
           <li>
             <Link to="/log-in-sign-up">Log In/Sign up</Link>
@@ -33,7 +35,17 @@ class App extends Component {
               <UserContainer />
             </Route>
           </Switch>
-        </Router>
+        </Router>)
+    } else {
+      return (
+        <div></div>// <Dashboard current_user ={this.state.current_user} />
+      )
+    }
+    return (
+      <div>
+        {/* <Navbar /> */}
+        {/* <Home /> */}
+
         {/* <UserContainer /> */}
         {/* <EstablishmentContainer establishments = {this.props.establishments}/> */}
       </div >
@@ -41,11 +53,6 @@ class App extends Component {
   }
 
 }
-
-function logInSignUp() {
-  return <UserContainer />
-}
-
 
 const mapStateToProps = state => {
   return {
