@@ -23,12 +23,27 @@ class App extends Component {
   render() {
     return (
       <div>
-        <UserContainer />
+        
+        <Router>
+          <li>
+            <Link to="/log-in-sign-up">Log In/Sign up</Link>
+          </li>
+          <Switch>
+            <Route path="/log-in-sign-up">
+              <UserContainer />
+            </Route>
+          </Switch>
+        </Router>
+        {/* <UserContainer /> */}
         {/* <EstablishmentContainer establishments = {this.props.establishments}/> */}
       </div >
     );
   }
 
+}
+
+function logInSignUp() {
+  return <UserContainer />
 }
 
 
