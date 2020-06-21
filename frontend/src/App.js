@@ -24,22 +24,17 @@ class App extends Component {
   }
 
   render() {
-    debugger
+    
+
     if (this.props.current_user === '') {
       return (
-        <Router>
-          <li>
-            <Link to="/log-in-sign-up">Log In/Sign up</Link>
-          </li>
-          <Switch>
-            <Route path="/log-in-sign-up">
-              <UserContainer />
-            </Route>
-          </Switch>
-        </Router>)
+        <UserContainer />
+      )
     } else {
       return (
-        <div></div>// <Dashboard current_user ={this.state.current_user} />
+        <div>
+          <h1>Current User:{this.props.current_user.username}</h1>
+          </div>// <Dashboard current_user ={this.state.current_user} />
       )
     }
     return (

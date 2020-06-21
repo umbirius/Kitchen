@@ -17,7 +17,6 @@ export default function manageUsers(state = {
 
         case 'ADD_USER':
             const user = { username: action.user.username, gender: action.user.gender, interests: action.user.interests}
-            debugger
             return { ...state, users: [...state.users, user], current_user: user}
 
         case 'DELETE_USER':

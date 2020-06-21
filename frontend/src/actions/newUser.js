@@ -1,8 +1,6 @@
 export function newUser(props) {
     let user = props
 
-    debugger
-
     const configUser = {
         method: "POST",
         headers: {
