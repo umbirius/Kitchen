@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import UserContainer from './containers/UserContainer.js'
+import Navbar from './containers/NavBar'
 import EstablishmentContainer from './containers/EstablishmentContainer';
 import { connect } from 'react-redux';
 import { fetchUsers } from './actions/fetchUsers';
@@ -24,17 +25,22 @@ class App extends Component {
   }
 
   render() {
-    
+
 
     if (this.props.current_user === '') {
       return (
-        <UserContainer />
+        <div>
+          <Navbar />
+          <UserContainer />
+        </div>
+
       )
     } else {
       return (
         <div>
+          <Navbar />
           <h1>Current User:{this.props.current_user.username}</h1>
-          </div>// <Dashboard current_user ={this.state.current_user} />
+        </div>// <Dashboard current_user ={this.state.current_user} />
       )
     }
     return (
