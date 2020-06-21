@@ -4,6 +4,7 @@ export const cuidFn = cuid;
 export default function manageUsers(state = {
     users: [],
     establishments: [],
+    current_user: '',
     loading: false
 
 }, action) {
