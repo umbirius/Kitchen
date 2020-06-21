@@ -15,16 +15,17 @@ import {
 
 class App extends Component {
 
-  state = {
-    current_user: ''
-  }
+  // state = {
+  //   current_user: ''
+  // }
 
   componentDidMount() {
     this.props.fetchUsers()
   }
 
   render() {
-    if (this.state.current_user === '') {
+    debugger
+    if (this.props.current_user === '') {
       return (
         <Router>
           <li>
@@ -57,6 +58,7 @@ class App extends Component {
 const mapStateToProps = state => {
   return {
     users: state.users,
+    current_user: state.current_user,
     loading: state.loading
   }
 }
