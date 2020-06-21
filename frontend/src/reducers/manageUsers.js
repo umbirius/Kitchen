@@ -9,6 +9,11 @@ export default function manageUsers(state = {
 
 }, action) {
     switch (action.type) {
+        case 'NEW_USER':
+            console.log("Creating User")
+            return {...state, users: [...state.users], loading:true
+            }
+        
         case 'ADD_USER':
             const user = { username: action.user.text, gender: action.user.gender, interests: action.user.text, id: cuid() }
             return { ...state, users: [...state.users, user] }

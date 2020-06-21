@@ -30,7 +30,7 @@ class UserForm extends Component {
     handleOnSubmit = event => {
         event.preventDefault()
         let user = this.state
-        this.props.addUser(user)
+        this.props.newUser(user)
     }
 
     render() {

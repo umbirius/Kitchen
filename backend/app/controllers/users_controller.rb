@@ -8,8 +8,8 @@ class UsersController < ApplicationController
 
 
   def create 
-    if User.find_by(:name => user_params[:name])
-        @user = User.find_by(:name => user_params[:name])
+    if User.find_by(:username => user_params[:username])
+        @user = User.find_by(:username => user_params[:username])
         redirect_to "/users/#{@user.id}"
     else
         @user = User.create(user_params)
@@ -25,6 +25,6 @@ end
 private
 
 def user_params
-    params.require(:user).permit(:name)
+    params.require(:user).permit(:username, :gender, :interests)
 end
 end
