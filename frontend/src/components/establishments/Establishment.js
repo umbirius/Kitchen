@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import EstablishmentContainer from '../../containers/EstablishmentContainer'
  
+
 class Establishment extends Component {
 
     // establishments = () => {}
@@ -10,10 +11,16 @@ class Establishment extends Component {
     render() {
         const e = this.props
         return (
-            <div key={e.id} >
-                <li>{e.name} - {e.genre} - {e.drinks}</li>
-
-            </div>
+            <tr key={e.id} >
+                <td>{e.name}</td>
+                <td>{e.genre}</td>
+                <td>{e.drinks}</td>
+                <td>
+                    <button>
+                        Look for date
+                    </button>
+                </td>
+            </tr>
         )
     }
 }

@@ -11,8 +11,6 @@ class EstablishmentContainer extends Component {
   }
 
 
-
-
   render() {
     debugger
     console.log("Establishments Container:")

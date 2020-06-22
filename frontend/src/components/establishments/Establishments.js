@@ -8,7 +8,15 @@ class Establishments extends Component {
         console.log(this.props)
         return (
             <div>
-                {this.props.establishments.map(e => <Establishment key={e.id} name={e.name} genre={e.genre} drinks={e.drinks} />)}
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Genre</th>
+                        <th>Alcohol</th>
+                        <th></th>
+                    </tr>
+                    {this.props.establishments.map(e => <Establishment key={e.id} name={e.name} genre={e.genre} drinks={e.drinks} />)}
+                </table>
             </div>
         )
     }
