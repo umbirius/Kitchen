@@ -11,13 +11,18 @@ export default function manageUsers(state = {
     switch (action.type) {
         case 'NEW_USER':
             console.log("Creating User")
-            return {
-                ...state, users: [...state.users], loading: true
-            }
+            return { ...state, users: [...state.users], loading: true }
 
         case 'ADD_USER':
-            const user = { username: action.user.username, gender: action.user.gender, interests: action.user.interests}
-            return { ...state, users: [...state.users, user], current_user: user}
+            const user = { username: action.user.username, gender: action.user.gender, interests: action.user.interests }
+            return { ...state, users: [...state.users, user], current_user: user }
+
+        case 'LOGGING_OUT':
+            console.log("Logging out")
+            return { ...state, current_user: [...state.current_user], loading: true }
+
+        case 'LOG_OUT':
+            return { ...state, current_user: ""}
 
         case 'DELETE_USER':
             return { ...state, users: state.users.filter(user => user.id !== action.id) }

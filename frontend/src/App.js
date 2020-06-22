@@ -21,7 +21,7 @@ class App extends Component {
   // }
 
   componentDidMount() {
-    this.props.fetchUsers()
+    // this.props.fetchUsers()
   }
 
   render() {
@@ -64,11 +64,11 @@ const mapStateToProps = state => {
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    fetchUsers: () => dispatch(fetchUsers())
-  }
-}
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     logOut: () => dispatch({type: 'LOG_OUT'}) }
+//   }
+// }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps)(App);
