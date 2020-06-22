@@ -4,7 +4,7 @@ export const cuidFn = cuid;
 export default function manageUsers(state = {
     users: [],
     establishments: [],
-    current_user: '',
+    current_user: undefined,
     loading: false
 
 }, action) {
@@ -19,10 +19,10 @@ export default function manageUsers(state = {
 
         case 'LOGGING_OUT':
             console.log("Logging out")
-            return { ...state, current_user: [...state.current_user], loading: true }
+            return { ...state, current_user: state.current_user, loading: true }
 
         case 'LOG_OUT':
-            return { ...state, current_user: ""}
+            return { ...state, users: [], current_user: undefined}
 
         case 'DELETE_USER':
             return { ...state, users: state.users.filter(user => user.id !== action.id) }

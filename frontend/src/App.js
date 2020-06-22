@@ -27,7 +27,7 @@ class App extends Component {
   render() {
 
 
-    if (this.props.current_user === '') {
+    if (this.props.current_user === 'sdfsdgsgdfgsdfgsdfgdf') {
       return (
         <div>
           <Navbar />
@@ -39,7 +39,7 @@ class App extends Component {
       return (
         <div>
           <Navbar />
-          <h1>Current User:{this.props.current_user.username}</h1>
+          <UserContainer />
         </div>// <Dashboard current_user ={this.state.current_user} />
       )
     }
