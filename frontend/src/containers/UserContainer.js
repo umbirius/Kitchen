@@ -4,6 +4,7 @@ import Profile from '../components/users/Profile'
 import { connect } from 'react-redux'
 import { newUser } from '../actions/newUser'
 import { logOut } from '../actions/logOut'
+import EstablishmentContainer from './EstablishmentContainer';
 
 class UserContainer extends Component {
 
@@ -20,6 +21,7 @@ class UserContainer extends Component {
             return (
                 <div>
                     < Profile currentUser={this.props.current_user} logOut = {this.props.logOut}/>
+                    < EstablishmentContainer />
                 </div>
             )
         }
