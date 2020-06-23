@@ -9,13 +9,17 @@ class Establishments extends Component {
         return (
             <div>
                 <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>Genre</th>
-                        <th>Alcohol</th>
-                        <th></th>
-                    </tr>
-                    {this.props.establishments.map(e => <Establishment key={e.id} name={e.name} genre={e.genre} drinks={e.drinks} />)}
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Genre</th>
+                            <th>Alcohol</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {this.props.establishments.map(e => <Establishment key={e.id} name={e.name} genre={e.genre} drinks={e.drinks} />)}
+                    </tbody>
                 </table>
             </div>
         )
