@@ -1,4 +1,4 @@
 class Appointment < ApplicationRecord
     belongs_to :establishment
-    belongs_to :users
+    belongs_to :user, optional: true
 end

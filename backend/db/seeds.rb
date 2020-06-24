@@ -30,14 +30,15 @@ csv.each do |row|
     e.save
 end 
 
-# csv_text = File.read(Rails.root.join('lib/appointment_seed.csv'))
-# csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
-# Establishment.all.each do |establishment|
-#     csv.each do |row|
-#         e = Appointment.new 
-#         e.name = row['name']
-#         e.genre = row['genre']
-#         e.drinks = row['drinks']
-#         e.save
-#     end 
-# end 
+
+csv_text = File.read(Rails.root.join('lib/appointment_seed.csv'))
+csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+Establishment.all.each do |establishment|
+    csv.each do |row|
+        a = establishment.appointments.new
+        a.when = DateTime.new(row['year'].to_i,row['month'].to_i,row['date'].to_i,row['hour'].to_i,row['minute'].to_i).strftime("%m/%d/%Y %H:%M")
+        a.code_word = Faker::Color.color_name + "-" + Faker::Creature::Animal.name
+        a.save
+    end 
+end 
+
