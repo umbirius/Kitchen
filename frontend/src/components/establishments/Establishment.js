@@ -8,6 +8,13 @@ class Establishment extends Component {
     //     this.props.establishments.map( establishment => <Establishment name={est} />)
     // }
 
+    handleOnClick = (event) => {
+        event.preventDefault()
+        console.log(`click ${this.props.name}`)
+    }
+    
+
+
     render() {
         const e = this.props
         return (
@@ -16,7 +23,7 @@ class Establishment extends Component {
                 <td>{e.genre}</td>
                 <td>{e.drinks}</td>
                 <td>
-                    <button>
+                    <button onClick ={event => this.handleOnClick(event)}>
                         Look for date
                     </button>
                 </td>
