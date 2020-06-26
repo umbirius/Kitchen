@@ -3,7 +3,7 @@ import './App.css';
 import UserContainer from './containers/UserContainer.js'
 import Navbar from './containers/NavBar'
 import EstablishmentContainer from './containers/EstablishmentContainer';
-import EstablishmentCard from './containers/EstablishmentCard'
+import EstablishmentCard from './components/establishments/EstablishmentCard'
 import { connect } from 'react-redux';
 import { fetchUsers } from './actions/fetchUsers';
 import {

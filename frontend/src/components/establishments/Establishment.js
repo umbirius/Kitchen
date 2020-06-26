@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import EstablishmentContainer from '../../containers/EstablishmentContainer'
- 
+import { Link } from "react-router-dom";
+
 
 class Establishment extends Component {
 
@@ -8,13 +9,18 @@ class Establishment extends Component {
     //     this.props.establishments.map( establishment => <Establishment name={est} />)
     // }
 
-    handleOnClick = (event) => {
-        event.preventDefault()
-        console.log(`click ${this.props.name}`)
-        window.location = `/locations/${this.props.id}`;
+    // handleOnClick = (event) => {
+    //     event.preventDefault()
+    //     console.log(`click ${this.props.name}`)
+    //     // window.location = `/locations/${this.props.id}`;
+    //     return (
+    //         <Link to={`/location/${this.props.id}`} establishment={this.props}>
+    //             <button>Log in</button>
+    //         </Link>
+    //     )
 
-    }
-    
+    // }
+
 
 
     render() {
@@ -25,9 +31,9 @@ class Establishment extends Component {
                 <td>{e.genre}</td>
                 <td>{e.drinks}</td>
                 <td>
-                    <button onClick ={event => this.handleOnClick(event)}>
-                        Look for date
-                    </button>
+                    <Link to={`/locations/${this.props.id}`} establishment={e}>
+                        <button>Look for Date</button>
+                    </Link>
                 </td>
             </tr>
         )

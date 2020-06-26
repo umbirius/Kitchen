@@ -3,14 +3,20 @@ import { connect } from 'react-redux'
 
 class EstablishmentCard extends Component {
 
+    // state = {
+    //     establishment: null
+    // }
 
-    id = Number(this.props.location.pathname.split("/locations/")[1])
+// componentDidMount () {
+//     fetchAppointments()
+// }
+
 
     render() {
         debugger
         return (
             <div>
-                hi
+                {this.props.location.pathname.split("/locations/")[1]}
             </div>
         )
     }
