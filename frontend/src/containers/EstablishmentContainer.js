@@ -25,7 +25,8 @@ class EstablishmentContainer extends Component {
 const mapStateToProps = state => {
   return {
     establishments: state.establishments,
-    loading: state.loading
+    loading: state.loading,
+    current_user: state.current_user
   }
 }
 

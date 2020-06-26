@@ -11,6 +11,8 @@ class Establishment extends Component {
     handleOnClick = (event) => {
         event.preventDefault()
         console.log(`click ${this.props.name}`)
+        window.location = `/locations/${this.props.id}`;
+
     }
     
 

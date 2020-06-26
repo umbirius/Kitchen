@@ -14,3 +14,9 @@ nav{
   align-items: center;
   list-style:none;
 }
+
+.log-in-sign-up{
+  align-items: center;
+  justify-content: space-around;
+  background: rgb(241, 224, 247);
+}

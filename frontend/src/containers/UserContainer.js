@@ -9,6 +9,11 @@ import EstablishmentContainer from './EstablishmentContainer';
 class UserContainer extends Component {
 
 
+    handleClick =() => {
+        window.location = '/locations';
+
+    }
+
 
     render() {
         if (this.props.current_user === undefined) {
@@ -20,13 +25,15 @@ class UserContainer extends Component {
         } else {
             return (
                 <div>
-                    < Profile currentUser={this.props.current_user} logOut = {this.props.logOut}/>
-                    < EstablishmentContainer />
+                    < Profile currentUser={this.props.current_user} logOut={this.props.logOut} />
+                    <button type="button" onClick={this.handleClick}>Find Date</button>
+                    {/* < EstablishmentContainer /> */}
                 </div>
             )
         }
     }
 }
+
 
 const mapStateToProps = state => {
     return {

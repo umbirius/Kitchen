@@ -18,7 +18,7 @@ class Establishments extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {this.props.establishments.map(e => <Establishment key={e.id} name={e.name} genre={e.genre} drinks={e.drinks} />)}
+                        {this.props.establishments.map(e => <Establishment id={e.id} name={e.name} genre={e.genre} drinks={e.drinks} />)}
                     </tbody>
                 </table>
             </div>
