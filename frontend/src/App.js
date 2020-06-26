@@ -16,45 +16,28 @@ import {
 
 class App extends Component {
 
-  // state = {
-  //   current_user: ''
-  // }
-
-  componentDidMount() {
-    // this.props.fetchUsers()
-  }
-
   render() {
-
-
-    if (this.props.current_user === 'sdfsdgsgdfgsdfgsdfgdf') {
-      return (
-        <div>
-          <Navbar />
-          <UserContainer />
-        </div>
-
-      )
-    } else {
-      return (
-        <div>
-          <Navbar />
-          <UserContainer />
-        </div>// <Dashboard current_user ={this.state.current_user} />
-      )
-    }
     return (
-      <div>
-        {/* <Navbar /> */}
-        {/* <Home /> */}
-
-        {/* <UserContainer /> */}
-        {/* <EstablishmentContainer establishments = {this.props.establishments}/> */}
-      </div >
-    );
+      <Router>
+        <div>
+          <Navbar />
+          <Switch>
+            <Route path='/' exact component={Home} />
+            <Route path="/user" component={UserContainer} />
+            <Route path="/locations" component={EstablishmentContainer} />
+          </Switch>
+        </div>
+      </Router>
+    )
   }
 
 }
+
+const Home = () => (
+  <div>
+    <h1>You are home</h1>
+  </div>
+)
 
 const mapStateToProps = state => {
   return {
