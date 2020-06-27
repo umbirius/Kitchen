@@ -5,6 +5,7 @@ export default function manageUsers(state = {
     users: [],
     establishments: [],
     current_user: undefined,
+    appointments: [],
     loading: false
 
 }, action) {
@@ -52,6 +53,21 @@ export default function manageUsers(state = {
                 establishments: action.establishments,
                 loading: false
             }
+
+        case 'LOAD_APPOINTMENTS':
+            return {
+                ...state,
+                appointments: [...state.appointments],
+                loading: true
+            }
+        case 'ADD_APPOINTMENTS':
+            return {
+                ...state,
+                appointments: action.appointments,
+                loading: false
+            }
+
+        
 
         default:
             return state;

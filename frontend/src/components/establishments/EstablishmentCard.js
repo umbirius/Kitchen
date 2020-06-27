@@ -1,41 +1,19 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import AppointmentContainer from '../../containers/AppointmentContainer'
 
 class EstablishmentCard extends Component {
 
-    // state = {
-    //     establishment: null
-    // }
-
-// componentDidMount () {
-//     fetchAppointments()
-// }
-
-
     render() {
-        debugger
+        const establishment_id = this.props.location.pathname.split("/locations/")[1]
         return (
             <div>
-                {this.props.location.pathname.split("/locations/")[1]}
+                <AppointmentContainer establishment = {establishment_id}/>
             </div>
         )
     }
 }
 
 
-const mapStateToProps = state => {
-    return {
-        establishments: state.establishments,
-        loading: state.loading,
-        current_user: state.current_user
-    }
-}
 
-
-// const mapDispatchToProps = dispatch => {
-//     return {
-//         fetchAppointments: () => dispatch(fetchAppointments(id))
-//     }
-// }
-
-export default connect(mapStateToProps)(EstablishmentCard)
+export default EstablishmentCard
