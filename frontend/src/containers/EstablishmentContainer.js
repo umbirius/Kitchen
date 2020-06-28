@@ -10,13 +10,13 @@ class EstablishmentContainer extends Component {
     this.props.fetchEstablishments()
   }
 
-
   render() {
+    debugger
     console.log("Establishments Container:")
     console.log(this.props.establishments)
     return (
       <div>
-        <Establishments establishments={this.props.establishments} />
+        <Establishments current_user = {this.props.current_user} establishments={this.props.establishments} />
       </div>)
   }
 }

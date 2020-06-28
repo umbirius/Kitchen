@@ -15,6 +15,7 @@ class AppointmentContainer extends Component {
 
 
     render() {
+        console.log(this.props.state)
         const open_appointments = this.props.appointments.filter(appointment => appointment.establishment_id == this.props.establishment)
         console.log("Appointments Container:")
         console.log(open_appointments)

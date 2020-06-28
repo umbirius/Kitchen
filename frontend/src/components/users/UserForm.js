@@ -36,7 +36,7 @@ class UserForm extends Component {
     render() {
         return (
             <div>
-                <form onSubmit={(event) => this.handleOnSubmit(event)}>
+                <form id="log-in-or-sign-up" onSubmit={(event) => this.handleOnSubmit(event)}>
                     <label>Username:</label>
                     <input
                         type='text'

@@ -4,7 +4,7 @@ import Profile from '../components/users/Profile'
 import { connect } from 'react-redux'
 import { newUser } from '../actions/newUser'
 import { logOut } from '../actions/logOut'
-import EstablishmentContainer from './EstablishmentContainer';
+import { Link } from "react-router-dom";
 
 class UserContainer extends Component {
 
@@ -16,17 +16,21 @@ class UserContainer extends Component {
 
 
     render() {
+        debugger
         if (this.props.current_user === undefined) {
             return (
-                <div className="log-in-sign-up">
+                <div className="user">
                     <UserForm newUser={this.props.newUser} />
                 </div>
             )
         } else {
             return (
-                <div>
+                <div className="user">
                     < Profile currentUser={this.props.current_user} logOut={this.props.logOut} />
-                    <button type="button" onClick={this.handleClick}>Find Date</button>
+                    {/* <button type="button" onClick={this.handleClick}>Find Date</button> */}
+                    <Link to={'/locations'} currentUser={this.props.current_user}>
+                        <button>Find Date</button>
+                    </Link>
                     {/* < EstablishmentContainer /> */}
                 </div>
             )

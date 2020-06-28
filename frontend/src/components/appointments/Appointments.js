@@ -7,7 +7,6 @@ import Appointment from './Appointment'
 
 class Appointments extends Component {
     render() {
-
         return (
             <div className="appointment-list">
                 {this.props.open_appointments.map(a => <Appointment id={a.id} when={a.when}/>)}

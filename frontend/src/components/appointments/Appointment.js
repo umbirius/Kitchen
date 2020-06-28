@@ -9,7 +9,6 @@ class Appointment extends Component {
 
 
     render () {
-        debugger
         return (
             <div key={this.props.id}> {new Date(this.props.when).toString()}<button>submit request</button></div>
         )
