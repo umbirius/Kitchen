@@ -1,4 +1,13 @@
-nav{
+nav.session-nav{
+  display:flex;
+  justify-content: space-around;
+  align-items: left;
+  min-height: 6vh;
+  background: rgb(85, 32, 50);
+  color: rgb(0, 0, 0)
+}
+
+nav.header-nav{
   display:flex;
   justify-content: space-around;
   align-items: center;
@@ -6,6 +15,16 @@ nav{
   background: rgb(230, 92, 138);
   color: rgb(0, 0, 0)
 }
+
+nav.tab-nav{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 6vh;
+  background: rgb(85, 32, 50);
+  color: rgb(0, 0, 0)
+}
+
 
 .nav-links{
   width: 50%;
@@ -44,3 +63,5 @@ nav{
   font-size: 10px;
   font-weight: 800;
 }
+
+

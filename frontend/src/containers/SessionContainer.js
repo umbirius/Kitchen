@@ -6,7 +6,7 @@ import { newUser } from '../actions/newUser'
 import { logOut } from '../actions/logOut'
 import { Link } from "react-router-dom";
 
-class UserContainer extends Component {
+class SessionContainer extends Component {
 
 
     handleClick =() => {
@@ -17,24 +17,24 @@ class UserContainer extends Component {
 
     render() {
         debugger
-        // if (this.props.current_user === undefined) {
+        if (this.props.current_user === undefined) {
             return (
                 <div className="user">
                     <UserForm newUser={this.props.newUser} />
                 </div>
             )
-        // } else {
-        //     return (
-        //         <div className="user">
-        //             {/* < Profile currentUser={this.props.current_user} logOut={this.props.logOut} /> */}
-        //             {/* <button type="button" onClick={this.handleClick}>Find Date</button> */}
-        //             <Link to={'/locations'} currentUser={this.props.current_user}>
-        //                 <button>Find Date</button>
-        //             </Link>
-        //             {/* < EstablishmentContainer /> */}
-        //         </div>
-        //     )
-        // }
+        } else {
+            return (
+                <div className="user">
+                    < Profile currentUser={this.props.current_user} logOut={this.props.logOut} />
+                    {/* <button type="button" onClick={this.handleClick}>Find Date</button> */}
+                    <Link to={'/locations'} currentUser={this.props.current_user}>
+                        <button>Find Date</button>
+                    </Link>
+                    {/* < EstablishmentContainer /> */}
+                </div>
+            )
+        }
     }
 }
 
@@ -52,4 +52,4 @@ const mapDispatchToProps = dispatch => ({
     logOut: () => dispatch(logOut()),
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(UserContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(SessionContainer)
