@@ -14,8 +14,13 @@ import {
 } from "react-router-dom";
 import SessionContainer from './containers/SessionContainer';
 import EstablishmentCard from './components/establishments/EstablishmentCard';
+import DashboardContainer from './containers/DashboardContainer';
 
 class App extends Component {
+
+
+
+
 
   render() {
     return (
@@ -29,6 +34,7 @@ class App extends Component {
             <Route path="/user" component={UserContainer} />
             <Route path="/locations" exact component={EstablishmentContainer} />
             <Route path="/locations/:id" component={EstablishmentCard}/>
+            <Route path="/dash" component={DashboardContainer}/>
           </Switch>
         </div>
       </Router>

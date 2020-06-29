@@ -18,14 +18,17 @@ class Navbar extends Component {
                 </nav>
                 <nav className="tab-nav">
                     <ul className="nav-links">
-                        <Link to='/user'>
-                            <li>Profile</li>
+                        <Link to='/dash'>
+                            <li>Dashboard</li>
                         </Link>
                         <Link to="/locations">
                             <li>Locations</li>
                         </Link>
                         <Link to="/matches">
                             <li>Matches</li>
+                        </Link>
+                        <Link to="/">
+                            <li>Home</li>
                         </Link>
                     </ul>
                 </nav>

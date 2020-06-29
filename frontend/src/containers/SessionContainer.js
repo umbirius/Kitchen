@@ -16,7 +16,6 @@ class SessionContainer extends Component {
 
 
     render() {
-        debugger
         if (this.props.current_user === undefined) {
             return (
                 <div className="user">

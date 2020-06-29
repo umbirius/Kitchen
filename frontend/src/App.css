@@ -64,4 +64,20 @@ nav.tab-nav{
   font-weight: 800;
 }
 
+.dashboard{
+  padding: 30px;
+  text-align: center;
+  vertical-align: center;
+}
+
+.establishments-container{
+  padding: 30px;
+  text-align: center;
+  vertical-align: center;  
+  align-items: center;
+  display:flex;
+  float: center
+  
+}
+
 

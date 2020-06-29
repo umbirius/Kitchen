@@ -4,13 +4,14 @@ class Appointment extends Component {
 
     handleClick = event => {
         event.preventDefault()
+        console.log(`reserve ${this.props.when}`)
     }
 
 
 
     render () {
         return (
-            <div key={this.props.id}> {new Date(this.props.when).toString()}<button>submit request</button></div>
+            <div key={this.props.id}> {new Date(this.props.when).toString().substr(0,21)}<button onClick={event => this.handleClick(event)}>submit request</button></div>
         )
     }
 }

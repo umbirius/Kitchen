@@ -11,11 +11,10 @@ class EstablishmentContainer extends Component {
   }
 
   render() {
-    debugger
     console.log("Establishments Container:")
     console.log(this.props.establishments)
     return (
-      <div>
+      <div className="establishments-container">
         <Establishments current_user = {this.props.current_user} establishments={this.props.establishments} />
       </div>)
   }

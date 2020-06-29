@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router';
+
 
 class UserForm extends Component {
 
@@ -31,6 +33,8 @@ class UserForm extends Component {
         event.preventDefault()
         let user = this.state
         this.props.newUser(user)
+        window.location = '/dash';
+        
     }
 
     render() {
