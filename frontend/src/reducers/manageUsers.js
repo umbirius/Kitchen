@@ -25,49 +25,19 @@ export default function manageUsers(state = {
         case 'LOG_OUT':
             return { ...state, users: [], current_user: undefined}
 
-        case 'DELETE_USER':
-            return { ...state, users: state.users.filter(user => user.id !== action.id) }
-
-        case 'LOAD_USERS':
-            return {
-                ...state,
-                users: [...state.users],
-                loading: true
-            }
-        case 'ADD_USERS':
-            return {
-                ...state,
-                users: action.users,
-                loading: false
-            }
-
         case 'LOAD_DATE_SPOTS':
-            return {
-                ...state,
-                establishments: [...state.establishments],
-                loading: true
+            return { ...state, establishments: [...state.establishments], loading: true
             }
         case 'ADD_ESTABLISHMENTS':
-            return {
-                ...state,
-                establishments: action.establishments,
-                loading: false
+            return { ...state, establishments: action.establishments, loading: false
             }
 
         case 'LOAD_APPOINTMENTS':
-            return {
-                ...state,
-                appointments: [...state.appointments],
-                loading: true
+            return { ...state, appointments: [...state.appointments], loading: true
             }
         case 'ADD_APPOINTMENTS':
-            return {
-                ...state,
-                appointments: action.appointments,
-                loading: false
+            return { ...state, appointments: action.appointments, loading: false
             }
-
-        
 
         default:
             return state;
