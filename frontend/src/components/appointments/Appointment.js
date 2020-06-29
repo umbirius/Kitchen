@@ -5,6 +5,8 @@ class Appointment extends Component {
     handleClick = event => {
         event.preventDefault()
         console.log(`reserve ${this.props.when}`)
+        debugger
+        // requestDate(this.props.current_user.id)
     }
 
 

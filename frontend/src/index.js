@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 // import * as serviceWorker from './serviceWorker';
-import manageUsers from './reducers/manageUsers'
+import manageUsers from './reducers/usersReducer'
 
 import { Provider } from 'react-redux'
-import { createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware} from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
+
+
 
 const store = createStore(manageUsers, composeWithDevTools(applyMiddleware(thunk)));
 

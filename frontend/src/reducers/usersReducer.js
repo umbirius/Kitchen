@@ -4,8 +4,8 @@ export const cuidFn = cuid;
 export default function manageUsers(state = {
     users: [],
     establishments: [],
-    current_user: undefined,
     appointments: [],
+    current_user: undefined,
     loading: false
 
 }, action) {
@@ -15,7 +15,7 @@ export default function manageUsers(state = {
             return { ...state, users: [...state.users], loading: true }
 
         case 'ADD_USER':
-            const user = { username: action.user.username, gender: action.user.gender, interests: action.user.interests }
+            const user = { id: action.user.id, username: action.user.username, gender: action.user.gender, interests: action.user.interests }
             return { ...state, users: [...state.users, user], current_user: user }
 
         case 'LOGGING_OUT':
@@ -23,7 +23,7 @@ export default function manageUsers(state = {
             return { ...state, current_user: state.current_user, loading: true }
 
         case 'LOG_OUT':
-            return { ...state, users: [], current_user: undefined}
+            return { ...state, current_user: undefined}
 
         case 'LOAD_DATE_SPOTS':
             return { ...state, establishments: [...state.establishments], loading: true

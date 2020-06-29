@@ -33,7 +33,7 @@ class UserForm extends Component {
         event.preventDefault()
         let user = this.state
         this.props.newUser(user)
-        window.location = '/dash';
+        // window.location = '/dash';
         // can use 'refs' on various inputs to refer to the data from a submit
         // this.refs.commentForm.reset()
     }

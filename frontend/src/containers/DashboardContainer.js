@@ -21,4 +21,12 @@ class DashboardContainer extends Component {
     }
 }
 
-export default DashboardContainer
+const mapStateToProps = state => {
+    return {
+        users: state.users,
+        current_user: state.current_user,
+        loading: state.loading
+    }
+}
+
+export default connect(mapStateToProps)(DashboardContainer)

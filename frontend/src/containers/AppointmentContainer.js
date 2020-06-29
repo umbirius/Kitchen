@@ -21,7 +21,7 @@ class AppointmentContainer extends Component {
         console.log(open_appointments)
         return (
             <div>
-                <Appointments open_appointments = {open_appointments}/>
+                <Appointments current_user = {this.props.current_user} open_appointments = {open_appointments}/>
             </div>)
     }
 }

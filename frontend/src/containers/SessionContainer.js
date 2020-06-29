@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import { newUser } from '../actions/newUser'
 import { logOut } from '../actions/logOut'
 import { Link } from "react-router-dom";
+import DashboardContainer from './DashboardContainer';
 
 class SessionContainer extends Component {
 
@@ -25,12 +26,13 @@ class SessionContainer extends Component {
         } else {
             return (
                 <div className="user">
-                    < Profile currentUser={this.props.current_user} logOut={this.props.logOut} />
+                    {/* < Profile currentUser={this.props.current_user} logOut={this.props.logOut} />
                     {/* <button type="button" onClick={this.handleClick}>Find Date</button> */}
-                    <Link to={'/locations'} currentUser={this.props.current_user}>
-                        <button>Find Date</button>
-                    </Link>
+                    {/* <Link to={'/locations'} currentUser={this.props.current_user}> */}
+                        {/* <button>Find Date</button> */}
+                    {/* </Link> */}
                     {/* < EstablishmentContainer /> */}
+                    <DashboardContainer />
                 </div>
             )
         }
