@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import UserForm from '../components/users/UserForm'
+import UserForm from '../components/sessions/UserForm'
 import Profile from '../components/users/Profile'
 import { connect } from 'react-redux'
 import { newUser } from '../actions/newUser'

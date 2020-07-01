@@ -17,7 +17,7 @@ export function newUser(props) {
 
     return (dispatch) => {
         dispatch({ type: 'NEW_USER"' })
-        fetch('http://localhost:3000/users', configUser)
+        fetch('http://localhost:3001/users', configUser)
             .then(response => response.json())
             .then(newUser => {
                 return dispatch({ type: 'ADD_USER', user: newUser })
