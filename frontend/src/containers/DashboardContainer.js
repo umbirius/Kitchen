@@ -1,32 +1,34 @@
 import React, { Component } from 'react';
-import Profile from '../components/users/Profile'
 import { connect } from 'react-redux'
-import EstablishmentContainer from './EstablishmentContainer';
-
+import { Link } from "react-router-dom"
 
 class DashboardContainer extends Component {
 
 
-    render () {
-        return (
-            <div className="dashboard">
-                <button>
-                    Search Date Locations
-                </button><br></br>
-                <button>
-                    View Submitted Appointments
-                </button>
-            </div>
-        )
+    render() {
+        if (this.props.current_user) {
+            return (
+                <div className="dashboard">
+                    <button>Search Date Locations</button>
+                    <button>View Submitted Appointments</button>
+                    <button id="log-out-button">Log Out</button>
+                </div>
+            )
+        } else {
+            return (
+                <Link to='/log-in'>
+                    <button id="log-in-button">Log In</button>
+                </Link>
+            )
+        }
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        users: state.users,
-        current_user: state.current_user,
-        loading: state.loading
-    }
-}
+const mapStateToProps = (state) => ({
+    users: state.users,
+    current_user: state.current_user,
+    loading: state.loading,
+    appointments: state.appointments
+})
 
 export default connect(mapStateToProps)(DashboardContainer)

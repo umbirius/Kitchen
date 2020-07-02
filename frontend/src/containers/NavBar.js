@@ -8,9 +8,6 @@ class Navbar extends Component {
             <div>
 
                 <nav className="session-nav">
-                    <Link to='/log-in'>
-                        <button id="log-in-button">Log in</button>
-                    </Link>
                 </nav>
                 <nav className="header-nav">
                     <h1>Date-Nite</h1>
