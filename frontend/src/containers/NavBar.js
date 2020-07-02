@@ -3,11 +3,10 @@ import { Link } from "react-router-dom"
 
 class Navbar extends Component {
 
-
-
     render() {
         return (
             <div>
+
                 <nav className="session-nav">
                     <Link to='/log-in'>
                         <button id="log-in-button">Log in</button>

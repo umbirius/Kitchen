@@ -10,13 +10,13 @@ class AppointmentContainer extends Component {
 
     componentDidMount = () => {
         this.props.fetchAppointments()
-
+        
     }
 
 
 
     render() {
-        // debugger
+        debugger
         let open_appointments = this.props.appointments.filter(appointment => appointment.establishment_id == this.props.establishment && appointment.status === false).sort(dateSort)
         console.log("Appointments Container:")
         console.log(open_appointments)

@@ -12,26 +12,25 @@ import {
 import SessionContainer from './containers/SessionContainer';
 import EstablishmentCard from './components/establishments/EstablishmentCard';
 import DashboardContainer from './containers/DashboardContainer';
+import MatchContainer from './containers/MatchContainer';
 
 class App extends Component {
-
-
-
 
 
   render() {
     return (
       <Router>
         <div className='app'>
-          <Navbar />
+          <Navbar user={this.props.current_user} />
 
           <Switch>
             <Route path='/' exact component={Home} />
             <Route path='/log-in' exact component={SessionContainer} />
             <Route path="/user" component={UserContainer} />
             <Route path="/locations" exact component={EstablishmentContainer} />
-            <Route path="/locations/:id" component={EstablishmentCard}/>
-            <Route path="/dash" component={DashboardContainer}/>
+            <Route path="/locations/:id" component={EstablishmentCard} />
+            <Route path="/dash" component={DashboardContainer} />
+            <Route path="/matches" component={MatchContainer} />
           </Switch>
         </div>
       </Router>
@@ -52,7 +51,7 @@ const mapStateToProps = state => {
   return {
     users: state.users,
     current_user: state.current_user,
-    loading: state.loading, 
+    loading: state.loading,
     appointments: state.appointments
   }
 }
