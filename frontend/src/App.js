@@ -7,10 +7,7 @@ import { connect } from 'react-redux';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams
+  Route
 } from "react-router-dom";
 import SessionContainer from './containers/SessionContainer';
 import EstablishmentCard from './components/establishments/EstablishmentCard';
@@ -55,7 +52,8 @@ const mapStateToProps = state => {
   return {
     users: state.users,
     current_user: state.current_user,
-    loading: state.loading
+    loading: state.loading, 
+    appointments: state.appointments
   }
 }
 

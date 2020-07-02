@@ -15,24 +15,20 @@ class EstablishmentContainer extends Component {
     console.log(this.props.establishments)
     return (
       <div className="establishments-container">
-        <Establishments current_user = {this.props.current_user} establishments={this.props.establishments} />
+        <Establishments current_user={this.props.current_user} establishments={this.props.establishments} />
       </div>)
   }
 }
 
 
-const mapStateToProps = state => {
-  return {
-    establishments: state.establishments,
-    loading: state.loading,
-    current_user: state.current_user
-  }
-}
+const mapStateToProps = state => ({
+  establishments: state.establishments,
+  loading: state.loading,
+  current_user: state.current_user
+})
 
-const mapDispatchToProps = dispatch => {
-  return {
-    fetchEstablishments: () => dispatch(fetchEstablishments())
-  }
-}
+const mapDispatchToProps = dispatch => ({
+  fetchEstablishments: () => dispatch(fetchEstablishments())
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(EstablishmentContainer)

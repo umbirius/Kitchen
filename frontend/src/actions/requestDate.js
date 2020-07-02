@@ -19,7 +19,7 @@ export function requestDate(props){
         fetch(`http://localhost:3001/appointments/${props.id}`, configDate)
             .then(response => response.json())
             .then(apt => {   
-                return dispatch({ type: 'SUBMIT_APPOINTMENT', appointment: apt })
+                return dispatch({ type: 'SUBMIT_APPOINTMENT', appointment: apt.data.attributes })
             })
     };
 }

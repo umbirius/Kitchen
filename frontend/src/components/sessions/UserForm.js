@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router';
 
 
 class UserForm extends Component {
@@ -16,13 +15,22 @@ class UserForm extends Component {
                 this.setState({
                     username: event.target.value,
                 })
+                break
             case "gender":
                 this.setState({
                     gender: event.target.value,
                 })
+                break
             case "interests":
                 this.setState({
                     interests: event.target.value,
+                })
+                break
+            default:
+                this.setState({
+                    username: '',
+                    gender: '',
+                    interests: ''
                 })
         }
 

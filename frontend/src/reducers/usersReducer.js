@@ -9,6 +9,7 @@ export default function manageUsers(state = {
     loading: false
 
 }, action) {
+    // debugger
     switch (action.type) {
         case 'NEW_USER':
             console.log("Creating User")
@@ -42,13 +43,19 @@ export default function manageUsers(state = {
             return {
                 ...state, appointments: action.appointments, loading: false
             }
-        case 'SUBMIT_APPOINTMENTS':
+        case 'SUBMIT_APPOINTMENT':
+            const index = state.appointments.findIndex(appointment => appointment.id == action.appointment.id)
+            const appointment = action.appointment
             return {
-                ...state, loading: false
+                ...state, 
+                appointments: [...state.appointments.slice(0, index).concat(appointment), 
+                ...state.appointments.slice(index + 1)], 
+                loading: false
             }
+
         case 'LOAD_REQUEST':
             return {
-                ...state, appointments: action.appointments, loading: true
+                ...state, appointments: [...state.appointments], loading: true
             }
 
         default:

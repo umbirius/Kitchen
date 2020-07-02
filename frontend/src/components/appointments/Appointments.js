@@ -11,7 +11,7 @@ class Appointments extends Component {
             <div className="appointment-list">
                 <h1>Available Dates
                 </h1>
-                {this.props.open_appointments.map(a => <Appointment id={a.id} when={a.when} current_user={this.props.current_user}
+                {this.props.open_appointments.map(a => <Appointment key={a.id} id={a.id}when={a.when} status={a.status}current_user={this.props.current_user}
                 requestDate = {this.props.requestDate}/>)}
 
             </div>

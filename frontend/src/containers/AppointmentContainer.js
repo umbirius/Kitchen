@@ -3,12 +3,12 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { fetchAppointments } from '../actions/fetchAppointments'
 import Appointments from '../components/appointments/Appointments'
-import { requestDate } from '../actions/requestDate' 
+import { requestDate } from '../actions/requestDate'
 
 class AppointmentContainer extends Component {
 
- 
-    componentDidMount() {
+
+    componentDidMount = () => {
         this.props.fetchAppointments()
 
     }
@@ -16,34 +16,29 @@ class AppointmentContainer extends Component {
 
 
     render() {
-        console.log(this.props.state)
-        const open_appointments = this.props.appointments.filter(appointment => appointment.establishment_id == this.props.establishment).sort(dateSort)
+        // debugger
+        let open_appointments = this.props.appointments.filter(appointment => appointment.establishment_id == this.props.establishment && appointment.status === false).sort(dateSort)
         console.log("Appointments Container:")
         console.log(open_appointments)
-        debugger
         return (
             <div>
-                <Appointments current_user = {this.props.current_user} open_appointments = {open_appointments} requestDate={this.props.requestDate}/>
+                <Appointments current_user={this.props.current_user} open_appointments={open_appointments} requestDate={this.props.requestDate} />
             </div>)
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        establishments: state.establishments,
-        loading: state.loading,
-        current_user: state.current_user,
-        appointments: state.appointments
-    }
-}
+const mapStateToProps = state => ({
+    establishments: state.establishments,
+    loading: state.loading,
+    current_user: state.current_user,
+    appointments: state.appointments
+})
 
 
-const mapDispatchToProps = dispatch => {
-    return {
-        fetchAppointments: () => dispatch(fetchAppointments()),
-        requestDate: (props) => dispatch(requestDate(props))
-    }
-}
+const mapDispatchToProps = dispatch => ({
+    fetchAppointments: () => dispatch(fetchAppointments()),
+    requestDate: (props) => dispatch(requestDate(props))
+})
 
 function dateSort(a, b) {
 
@@ -52,9 +47,9 @@ function dateSort(a, b) {
 
     let comparison = 0;
     if (dateA > dateB) {
-      comparison = 1;
+        comparison = 1;
     } else if (dateA < dateB) {
-      comparison = -1;
+        comparison = -1;
     }
     return comparison;
 

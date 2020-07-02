@@ -26,7 +26,7 @@ class Establishment extends Component {
     render() {
         const e = this.props
         return (
-            <tr key={e.id} >
+            <tr id={e.id} >
                 <td>{e.name}</td>
                 <td>{e.genre}</td>
                 <td>{e.drinks}</td>
