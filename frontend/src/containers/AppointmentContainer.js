@@ -16,12 +16,11 @@ class AppointmentContainer extends Component {
 
 
     render() {
-        debugger
         let open_appointments = this.props.appointments.filter(appointment => appointment.establishment_id == this.props.establishment && appointment.status === false).sort(dateSort)
         console.log("Appointments Container:")
         console.log(open_appointments)
         return (
-            <div>
+            <div className="center-app">
                 <Appointments current_user={this.props.current_user} open_appointments={open_appointments} requestDate={this.props.requestDate} />
             </div>)
     }

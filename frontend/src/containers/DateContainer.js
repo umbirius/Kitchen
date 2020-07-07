@@ -12,7 +12,7 @@ class DateContainer extends Component {
 
     render () {
         return (
-            <div>
+            <div className="center-app">
                 find Date
             </div>
         )

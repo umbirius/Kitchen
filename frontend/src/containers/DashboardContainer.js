@@ -16,9 +16,17 @@ class DashboardContainer extends Component {
             )
         } else {
             return (
-                <Link to='/log-in'>
-                    <button id="log-in-button">Log In</button>
-                </Link>
+                <div className="center-app">
+                    <Link to='/log-in'>
+                        <button id="log-in-button">Log In</button>
+                    </Link>
+                    <br></br>
+                    ---- or ----
+                    <br></br>
+                    <Link to='/sign-up'>
+                        <button id="sign-up-button">Sign In</button>
+                    </Link>
+                </div>
             )
         }
     }

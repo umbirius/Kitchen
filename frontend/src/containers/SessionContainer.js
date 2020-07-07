@@ -19,13 +19,13 @@ class SessionContainer extends Component {
     render() {
         if (this.props.current_user === undefined) {
             return (
-                <div className="user">
+                <div className="center-app">
                     <UserForm newUser={this.props.newUser} />
                 </div>
             )
         } else {
             return (
-                <div className="user">
+                <div className="center-app">
                     {/* < Profile currentUser={this.props.current_user} logOut={this.props.logOut} />
                     {/* <button type="button" onClick={this.handleClick}>Find Date</button> */}
                     {/* <Link to={'/locations'} currentUser={this.props.current_user}> */}

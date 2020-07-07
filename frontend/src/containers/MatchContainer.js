@@ -10,7 +10,9 @@ class MatchContainer extends Component {
             && apt.status == true)
 
         return (
-            <Matches establishments={this.props.establishments} matches={matches} />
+            <div className="center-app">
+                <Matches establishments={this.props.establishments} matches={matches} />
+            </div>
         )
     }
 }

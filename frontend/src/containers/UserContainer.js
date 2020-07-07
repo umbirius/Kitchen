@@ -19,7 +19,7 @@ class UserContainer extends Component {
         debugger
         // if (this.props.current_user === undefined) {
             return (
-                <div className="user">
+                <div className="center-app">
                     <UserForm newUser={this.props.newUser} />
                 </div>
             )

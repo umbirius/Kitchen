@@ -14,7 +14,7 @@ class EstablishmentContainer extends Component {
     console.log("Establishments Container:")
     console.log(this.props.establishments)
     return (
-      <div className="establishments-container">
+      <div className="center-app">
         <Establishments current_user={this.props.current_user} establishments={this.props.establishments} />
       </div>)
   }
