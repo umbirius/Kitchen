@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import {
   BrowserRouter as Router,
   Switch,
+  Redirect,
   Route
 } from "react-router-dom";
 import SessionContainer from './containers/SessionContainer';
@@ -19,12 +20,12 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
-        <div className='app'>
-          <Navbar user={this.props.current_user} />
+      <div className='app'>
 
+        <Router>
+          <Navbar user={this.props.current_user} />
           <Switch>
-            <Route path='/' exact component={Home} />
+            <Route path="*" component={DashboardContainer} />
             <Route path='/log-in' exact component={SessionContainer} />
             <Route path="/user" component={UserContainer} />
             <Route path="/locations" exact component={EstablishmentContainer} />
@@ -32,8 +33,9 @@ class App extends Component {
             <Route path="/dash" component={DashboardContainer} />
             <Route path="/matches" component={MatchContainer} />
           </Switch>
-        </div>
-      </Router>
+        </Router>
+      </div>
+
     )
   }
 }
