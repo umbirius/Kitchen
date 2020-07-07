@@ -24,7 +24,7 @@ class DashboardContainer extends Component {
                     ---- or ----
                     <br></br>
                     <Link to='/sign-up'>
-                        <button id="sign-up-button">Sign In</button>
+                        <button id="sign-up-button">Sign Up</button>
                     </Link>
                 </div>
             )

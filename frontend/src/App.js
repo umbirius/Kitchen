@@ -25,13 +25,14 @@ class App extends Component {
         <Router>
           <Navbar user={this.props.current_user} />
           <Switch>
-            <Route path="*" component={DashboardContainer} />
             <Route path='/log-in' exact component={SessionContainer} />
+            <Route path='/sign-up' exact component={SessionContainer} />
             <Route path="/user" component={UserContainer} />
             <Route path="/locations" exact component={EstablishmentContainer} />
             <Route path="/locations/:id" component={EstablishmentCard} />
             <Route path="/dash" component={DashboardContainer} />
             <Route path="/matches" component={MatchContainer} />
+            <Route path="*" component={DashboardContainer} />
           </Switch>
         </Router>
       </div>
