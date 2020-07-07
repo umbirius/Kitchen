@@ -8,7 +8,7 @@ class DashboardContainer extends Component {
     render() {
         if (this.props.current_user) {
             return (
-                <div className="dashboard">
+                <div className="center-app">
                     <button>Search Date Locations</button>
                     <button>View Submitted Appointments</button>
                     <button id="log-out-button">Log Out</button>

@@ -3,7 +3,7 @@ nav.session-nav{
   justify-content: space-around;
   align-items: left;
   min-height: 6vh;
-  background: rgb(85, 32, 50);
+  background: rgb(255, 221, 232);
   color: rgb(0, 0, 0)
 }
 
@@ -21,7 +21,7 @@ nav.tab-nav{
   justify-content: space-around;
   align-items: center;
   min-height: 6vh;
-  background: rgb(85, 32, 50);
+  background: rgb(255, 221, 232);
   color: rgb(0, 0, 0)
 }
 
