@@ -1,5 +1,5 @@
-import React, {Component} from 'react'
-import {Redirect} from 'react-router-dom';
+import React, { Component } from 'react'
+import { Redirect } from 'react-router-dom';
 
 class Appointment extends Component {
 
@@ -13,9 +13,12 @@ class Appointment extends Component {
 
 
 
-    render () {
+    render() {
         return (
-            <div id={this.props.id} status= {this.props.status.toString()}> {new Date(this.props.when).toString().substr(0,21)}<button onClick={event => this.handleClick(event)}>submit request</button></div>
+            <tr id={this.props.id} status={this.props.status.toString()}>
+                <td>{new Date(this.props.when).toString().substr(0, 21)}</td>
+                <td><button onClick={event => this.handleClick(event)}>submit request</button></td>
+            </tr>
         )
     }
 }
