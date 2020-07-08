@@ -7,7 +7,7 @@ class Match extends Component {
         return(
             <tr>
                 <td>{place.name}</td>
-                <td>{Date(this.props.when).toString().substr(0,21)}</td>
+                <td>{new Date(this.props.when).toString().substr(0,21)}</td>
                 <td>{this.props.code_word}</td>
             </tr>
         )
