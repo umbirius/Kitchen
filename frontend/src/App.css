@@ -1,46 +1,56 @@
-nav.session-nav{
-  display:flex;
+nav.session-nav {
+  display: flex;
   justify-content: space-around;
   align-items: left;
   min-height: 6vh;
-  background: rgb(255, 221, 232);
+  background: #ffffff;
   color: rgb(0, 0, 0)
 }
 
-nav.header-nav{
-  display:flex;
+nav.header-nav {
+  display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: left;
+  vertical-align: center;
   min-height: 10vh;
-  background: rgb(230, 92, 138);
+  background: #ffffff;
   color: rgb(0, 0, 0)
 }
 
-nav.tab-nav{
-  display:flex;
+nav.header-nav>h1 {
+  color: #fafafa;
+  font-family: 'Relica';
+  font-size: 100px;
+  font-weight: bold;
+  line-height: 48px;
+  margin: 10px 0 10px;
+  -webkit-text-stroke: 2px #000000
+  /* text-shadow: 1px 0 0 rgb(219, 219, 219); */
+}
+
+nav.tab-nav {
+  display: flex;
   justify-content: space-around;
   align-items: center;
   min-height: 6vh;
-  background: rgb(255, 221, 232);
+  background: #ffffff;
   color: rgb(0, 0, 0)
 }
 
-
-.nav-links{
+.nav-links {
   width: 50%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  list-style:none;
+  list-style: none;
 }
 
-
-.app{
+.app {
   text-align: center;
   vertical-align: middle;
 }
 
-.user{
+.user {
   vertical-align: middle;
   align-items: center;
   height: 50%;
@@ -48,7 +58,7 @@ nav.tab-nav{
   justify-content: center;
 }
 
-#log-in-or-sign-up{
+#log-in-or-sign-up {
   margin-right: 10px;
   /* width: 100%; */
   background: #e94a22;
@@ -66,23 +76,22 @@ nav.tab-nav{
   max-height: 4000x;
 }
 
-.dashboard{
+.dashboard {
   padding: 30px;
   text-align: center;
   vertical-align: center;
 }
 
-.establishments-container{
+.establishments-container {
   padding: 30px;
   text-align: center;
-  vertical-align: center;  
+  vertical-align: center;
   align-items: center;
-  display:flex;
+  display: flex;
   float: center
-  
 }
 
-.center-app{
+.center-app {
   vertical-align: center;
   background-color: rgb(241, 215, 231);
   margin-top: 20pt;
@@ -98,5 +107,11 @@ nav.tab-nav{
   max-width: 4000px;
   max-height: 4000px;
   display: inline-block;
+}
 
+@font-face {
+  font-family: 'Relica';
+  src: url(./fonts/TTF/RelicaRounded-Regular.ttf);
+  font-style: normal;
+  font-weight: normal;
 }
