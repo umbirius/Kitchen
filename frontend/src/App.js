@@ -19,25 +19,41 @@ class App extends Component {
 
 
   render() {
-    return (
-      <div className='app'>
 
-        <Router>
-          <Navbar user={this.props.current_user} />
-          <Switch>
-            <Route path='/log-in' exact component={SessionContainer} />
-            <Route path='/sign-up' exact component={SessionContainer} />
-            <Route path="/user" component={UserContainer} />
-            <Route path="/locations" exact component={EstablishmentContainer} />
-            <Route path="/locations/:id" component={EstablishmentCard} />
-            <Route path="/dash" component={DashboardContainer} />
-            <Route path="/matches" component={MatchContainer} />
-            <Route path="*" component={DashboardContainer} />
-          </Switch>
-        </Router>
-      </div>
+    if (this.props.current_user) {
+      return (
+        <div className='app'>
 
-    )
+          <Router>
+            <Navbar user={this.props.current_user} />
+            <Switch>
+              <Route path='/log-in' exact component={SessionContainer} />
+              <Route path='/sign-up' exact component={SessionContainer} />
+              <Route path="/user" component={UserContainer} />
+              <Route path="/locations" exact component={EstablishmentContainer} />
+              <Route path="/locations/:id" component={EstablishmentCard} />
+              <Route path="/dash" component={DashboardContainer} />
+              <Route path="/matches" component={MatchContainer} />
+              <Route path="*" component={DashboardContainer} />
+            </Switch>
+          </Router>
+        </div>
+      )
+    } else {
+      return (
+        <div className='app'>
+          <Router>
+            <Navbar user={this.props.current_user} />
+            <Switch>
+              <Route path='/log-in' exact component={SessionContainer} />
+              <Route path='/sign-up' exact component={SessionContainer} />
+              <Route path="*" component={DashboardContainer} />
+            </Switch>
+          </Router>
+        </div>
+      )
+    }
+
   }
 }
 
