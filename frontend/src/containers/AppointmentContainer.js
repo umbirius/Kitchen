@@ -16,7 +16,8 @@ class AppointmentContainer extends Component {
 
 
     render() {
-        let open_appointments = this.props.appointments.filter(appointment => appointment.establishment_id == this.props.establishment && appointment.status === false).sort(dateSort)
+        
+        let open_appointments = this.props.appointments.filter(a => a.establishment_id == this.props.establishment && a.status === false && (a.user_id_one || a.user_id_two) != this.props.current_user.id).sort(dateSort)
         console.log("Appointments Container:")
         console.log(open_appointments)
         return (
