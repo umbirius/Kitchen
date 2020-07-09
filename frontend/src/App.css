@@ -14,7 +14,8 @@ nav.header-nav {
   vertical-align: center;
   min-height: 10vh;
   background: #ffffff;
-  color: rgb(0, 0, 0)
+  color: rgb(0, 0, 0);
+  border-bottom: 3px solid black;
 }
 
 nav.header-nav>h1 {
@@ -23,8 +24,8 @@ nav.header-nav>h1 {
   font-size: 100px;
   font-weight: bold;
   line-height: 48px;
-  margin: 10px 0 10px;
-  -webkit-text-stroke: 2px #000000
+  margin: 10px 0 30px;
+  -webkit-text-stroke: 2px #000000;
   /* text-shadow: 1px 0 0 rgb(219, 219, 219); */
 }
 
@@ -34,7 +35,8 @@ nav.tab-nav {
   align-items: center;
   min-height: 6vh;
   background: #ffffff;
-  color: rgb(0, 0, 0)
+  color: rgb(0, 0, 0);
+  border-bottom: 3px solid black;
 }
 
 .nav-links {
@@ -43,6 +45,7 @@ nav.tab-nav {
   justify-content: space-around;
   align-items: center;
   list-style: none;
+  font-size: 28px;
 }
 
 .app {
@@ -93,7 +96,7 @@ nav.tab-nav {
 
 .center-app {
   vertical-align: center;
-  background-color: rgb(241, 215, 231);
+  background-color: rgb(255, 255, 255);
   margin-top: 20pt;
   margin-bottom: 20pt;
   /* margin-left: 20%;
@@ -115,3 +118,33 @@ nav.tab-nav {
   font-style: normal;
   font-weight: normal;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  color: #000000;
+  /* -webkit-text-stroke: 1px #000000; */
+  font-weight: bold;
+}
+
+button {
+  color: #494949 !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #ffffff;
+  padding: 25px 80px;
+  margin: 15px 30px;
+  border: 4px solid #000000 !important;
+  display: inline-block;
+  transition: all 0.4s ease 0s;
+  border-radius: 40pt;
+  font-size: 16px;
+  }
+  
+
+button:hover {
+    color: #ffffff !important;
+    background: #f35e19;
+    /* border-color: #f6b93b !important; */
+    transition: all 0.4s ease 0s;
+    }
