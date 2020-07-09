@@ -4,6 +4,10 @@ import { Link } from "react-router-dom"
 
 class DashboardContainer extends Component {
 
+    handleOnClick = e => {
+        e.preventDefault()
+        this.props.logOut()
+    }
 
     render() {
         if (this.props.current_user) {
@@ -11,7 +15,7 @@ class DashboardContainer extends Component {
                 <div className="center-app">
                     <button>Search Date Locations</button>
                     <button>View Submitted Appointments</button>
-                    <button id="log-out-button">Log Out</button>
+                    <button onClick={this.handleOnClick} id="log-out-button">Log Out</button>
                 </div>
             )
         } else {
@@ -39,4 +43,11 @@ const mapStateToProps = (state) => ({
     appointments: state.appointments
 })
 
-export default connect(mapStateToProps)(DashboardContainer)
+const mapDispatchToProps = dispatch => {
+    return {
+        logOut: () => dispatch({ type: 'LOG_OUT' })
+    }
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(DashboardContainer)
