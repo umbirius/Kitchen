@@ -12,6 +12,7 @@ class Matches extends Component {
                             <th>Where</th>
                             <th>When</th>
                             <th>Codeword</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>

@@ -9,6 +9,9 @@ class Match extends Component {
                 <td>{place.name}</td>
                 <td>{new Date(this.props.when).toString().substr(0,21)}</td>
                 <td>{this.props.code_word}</td>
+                <td>
+                    <button>Cancel</button>
+                </td>
             </tr>
         )
     }
