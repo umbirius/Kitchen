@@ -135,16 +135,15 @@ button {
   padding: 25px 80px;
   margin: 15px 30px;
   border: 4px solid #000000 !important;
-  display: inline-block;
   transition: all 0.4s ease 0s;
   border-radius: 40pt;
   font-size: 16px;
-  }
-  
+  display: block;
+}
 
 button:hover {
-    color: #ffffff !important;
-    background: #f35e19;
-    /* border-color: #f6b93b !important; */
-    transition: all 0.4s ease 0s;
-    }
+  color: #ffffff !important;
+  background: #f35e19;
+  /* border-color: #f6b93b !important; */
+  transition: all 0.4s ease 0s;
+}

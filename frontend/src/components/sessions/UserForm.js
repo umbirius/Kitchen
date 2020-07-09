@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 
 
 class UserForm extends Component {
@@ -6,7 +7,8 @@ class UserForm extends Component {
     state = {
         username: '',
         gender: '',
-        interests: ''
+        interests: '',
+        redirect: false
     }
 
     handleOnChange = event => {
@@ -41,37 +43,46 @@ class UserForm extends Component {
         event.preventDefault()
         let user = this.state
         this.props.newUser(user)
+        this.setState({
+            redirect: true
+        })
         // window.location = '/dash';
         // can use 'refs' on various inputs to refer to the data from a submit
         // this.refs.commentForm.reset()
     }
 
     render() {
-        return (
-            <div>
-                <form id="log-in-or-sign-up" onSubmit={(event) => this.handleOnSubmit(event)}>
-                    <label>Username:</label>
-                    <input
-                        type='text'
-                        id='username'
-                        onChange={(event) => this.handleOnChange(event)}
-                    />
-                    <br></br>
-                    <label>Gender</label>
-                    <select id="gender" onChange={(event) => this.handleOnChange(event)} >
-                        <option value='male'>Male</option>
-                        <option value='female'>Female</option>
-                    </select><br></br>
-                    <label>Interested In:</label>
-                    <select id="interests" onChange={(event) => this.handleOnChange(event)}>
-                        <option value='men'>Men</option>
-                        <option value='women'>Women</option>
-                        <option value='men+women'>Men and Women</option>
-                    </select><br></br>
-                    <input type="submit" value="Create Account"></input>
-                </form>
-            </div>
-        )
+
+        if (this.state.redirect === true) {
+            return <Redirect to="/dash" />
+        } else {
+
+            return (
+                <div>
+                    <form id="log-in-or-sign-up" onSubmit={(event) => this.handleOnSubmit(event)}>
+                        <label>Username:</label>
+                        <input
+                            type='text'
+                            id='username'
+                            onChange={(event) => this.handleOnChange(event)}
+                        />
+                        <br></br>
+                        <label>Gender</label>
+                        <select id="gender" onChange={(event) => this.handleOnChange(event)} >
+                            <option value='male'>Male</option>
+                            <option value='female'>Female</option>
+                        </select><br></br>
+                        <label>Interested In:</label>
+                        <select id="interests" onChange={(event) => this.handleOnChange(event)}>
+                            <option value='men'>Men</option>
+                            <option value='women'>Women</option>
+                            <option value='men+women'>Men and Women</option>
+                        </select><br></br>
+                        <input type="submit" value="Create Account"></input>
+                    </form>
+                </div>
+            )
+        }
     }
 }
 
