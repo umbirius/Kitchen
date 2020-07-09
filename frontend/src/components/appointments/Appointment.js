@@ -14,6 +14,7 @@ class Appointment extends Component {
 
 
     render() {
+        
         return (
             <tr id={this.props.id} status={this.props.status.toString()}>
                 <td>{new Date(this.props.when).toString().substr(0, 21)}</td>

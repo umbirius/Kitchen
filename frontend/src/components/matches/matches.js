@@ -16,7 +16,7 @@ class Matches extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {this.props.matches.map(match => <Match key={match.id} when={match.when} code_word ={match.code_word} est_id={match.establishment_id} establishments={this.props.establishments} />)}
+                        {this.props.matches.map(match => <Match key={match.id} id={match.id} when={match.when} code_word ={match.code_word} est_id={match.establishment_id} establishments={this.props.establishments} cancel={true} current_user={this.props.current_user} cancelAppointment={this.props.cancelAppointment}/>)}
                     </tbody>
                 </table>
             </div>

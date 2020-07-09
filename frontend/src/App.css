@@ -41,6 +41,7 @@ nav.tab-nav {
 
 nav.tab-nav:hover{
   cursor: pointer;
+  
 }
 
 .nav-links {
@@ -129,6 +130,12 @@ a {
   color: #000000;
   /* -webkit-text-stroke: 1px #000000; */
   font-weight: bold;
+}
+
+a:hover {
+  color: #f35e19;
+  /* border-color: #f6b93b !important; */
+  transition: all 0.4s ease 0s;
 }
 
 button {

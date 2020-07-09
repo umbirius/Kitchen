@@ -43,13 +43,13 @@ export default function manageUsers(state = {
             return {
                 ...state, appointments: action.appointments, loading: false
             }
-        case 'SUBMIT_APPOINTMENT':
+        case 'UPDATE_APPOINTMENT':
             const index = state.appointments.findIndex(appointment => appointment.id == action.appointment.id)
             const appointment = action.appointment
             return {
-                ...state, 
-                appointments: [...state.appointments.slice(0, index).concat(appointment), 
-                ...state.appointments.slice(index + 1)], 
+                ...state,
+                appointments: [...state.appointments.slice(0, index).concat(appointment),
+                ...state.appointments.slice(index + 1)],
                 loading: false
             }
 

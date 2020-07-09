@@ -1,4 +1,4 @@
-export function requestDate(props){
+export function cancelAppointment(props){
 
 
     const configDate = {
@@ -9,7 +9,8 @@ export function requestDate(props){
         body: JSON.stringify(
             {
                     user_id: props.current_user.id,
-                    appointment_id: props.id
+                    appointment_id: props.id,
+                    cancel: props.cancel
             }
         )
     }
