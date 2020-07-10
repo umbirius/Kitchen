@@ -10,7 +10,6 @@ class Match extends Component {
 
 
     render() {
-        debugger
         const place = this.props.establishments.find(e => e.id == this.props.est_id)
         return (
             <tr>

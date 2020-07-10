@@ -4,13 +4,10 @@ import { connect } from 'react-redux';
 import { newUser } from '../../actions/newUser'
 
 
-
-class SignUp extends Component {
+class LogIn extends Component {
 
     state = {
         username: '',
-        gender: '',
-        interests: '',
         redirect: false
     }
 
@@ -21,21 +18,10 @@ class SignUp extends Component {
                     username: event.target.value,
                 })
                 break
-            case "gender":
-                this.setState({
-                    gender: event.target.value,
-                })
-                break
-            case "interests":
-                this.setState({
-                    interests: event.target.value,
-                })
-                break
+
             default:
                 this.setState({
-                    username: '',
-                    gender: '',
-                    interests: ''
+                    username: ''
                 })
         }
 
@@ -67,19 +53,7 @@ class SignUp extends Component {
                             id='username'
                             onChange={(event) => this.handleOnChange(event)}
                         />
-                        <br></br>
-                        <label>Gender</label>
-                        <select id="gender" onChange={(event) => this.handleOnChange(event)} >
-                            <option value='male'>Male</option>
-                            <option value='female'>Female</option>
-                        </select><br></br>
-                        <label>Interested In:</label>
-                        <select id="interests" onChange={(event) => this.handleOnChange(event)}>
-                            <option value='men'>Men</option>
-                            <option value='women'>Women</option>
-                            <option value='men+women'>Men and Women</option>
-                        </select><br></br>
-                        <input type="submit" value="Sign Up"></input>
+                        <input type="submit" value="Log In"></input>
                     </form>
                 </div>
             )
@@ -99,4 +73,4 @@ const mapDispatchToProps = dispatch => ({
     newUser: props => dispatch(newUser(props))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(SignUp)
+export default connect(mapStateToProps, mapDispatchToProps)(LogIn)

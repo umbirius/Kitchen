@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
-import UserContainer from './containers/UserContainer.js'
 import Navbar from './containers/NavBar'
 import EstablishmentContainer from './containers/EstablishmentContainer';
 import { connect } from 'react-redux';
 import {
   BrowserRouter as Router,
   Switch,
-  Redirect,
   Route
 } from "react-router-dom";
-import SessionContainer from './containers/SessionContainer';
+// import SessionContainer from './containers/SessionContainer';
+import SignUp from './components/sessions/SignUp'
+import LogIn from './components/sessions/LogIn'
 import EstablishmentCard from './components/establishments/EstablishmentCard';
 import DashboardContainer from './containers/DashboardContainer';
 import MatchContainer from './containers/MatchContainer';
@@ -25,11 +25,10 @@ class App extends Component {
         <div className='app'>
 
           <Router>
-            <Navbar user={this.props.current_user} />
+            <Navbar />
             <Switch>
-              <Route path='/log-in' exact component={SessionContainer} />
-              <Route path='/sign-up' exact component={SessionContainer} />
-              <Route path="/user" component={UserContainer} />
+              <Route path='/sign-up' exact component={SignUp} />
+              <Route path='/log-in' exact component={LogIn} />
               <Route path="/locations" exact component={EstablishmentContainer} />
               <Route path="/locations/:id" component={EstablishmentCard} />
               <Route path="/dash" component={DashboardContainer} />
@@ -43,10 +42,10 @@ class App extends Component {
       return (
         <div className='app'>
           <Router>
-            <Navbar user={this.props.current_user} />
+            <Navbar />
             <Switch>
-              <Route path='/log-in' exact component={SessionContainer} />
-              <Route path='/sign-up' exact component={SessionContainer} />
+              <Route path='/sign-up' exact component={SignUp} />
+              <Route path='/log-in' exact component={LogIn} />
               <Route path="*" component={DashboardContainer} />
             </Switch>
           </Router>
@@ -59,13 +58,6 @@ class App extends Component {
 
 
 
-
-const Home = () => (
-  <div>
-    <h1>You are home</h1>
-  </div>
-)
-
 const mapStateToProps = state => {
   return {
     users: state.users,
@@ -75,11 +67,6 @@ const mapStateToProps = state => {
   }
 }
 
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     logOut: () => dispatch({type: 'LOG_OUT'}) }
-//   }
-// }
 
 
 export default connect(mapStateToProps)(App);
