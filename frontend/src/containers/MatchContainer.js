@@ -2,10 +2,17 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Matches from '../components/matches/Matches'
 import { cancelAppointment } from '../actions/cancelAppointment'
+import { fetchAppointments } from '../actions/fetchAppointments'
+import { fetchEstablishments } from '../actions/fetchEstablishments'
+
 
 
 class MatchContainer extends Component {
 
+    componentDidMount = () => {
+        this.props.fetchAppointments()
+        this.props.fetchEstablishments()
+    }
 
     render() {
         const matches = this.props.appointments.filter(apt => (apt.user_id_one == this.props.current_user.id || apt.user_id_two == this.props.current_user.id)
@@ -13,7 +20,7 @@ class MatchContainer extends Component {
 
         return (
             <div className="center-app">
-                <Matches establishments={this.props.establishments} matches={matches} current_user={this.props.current_user} cancelAppointment={this.props.cancelAppointment}/>
+                <Matches establishments={this.props.establishments} matches={matches} current_user={this.props.current_user} cancelAppointment={this.props.cancelAppointment} />
             </div>
         )
     }
@@ -29,7 +36,9 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    cancelAppointment: (props) => dispatch(cancelAppointment(props))
+    cancelAppointment: (props) => dispatch(cancelAppointment(props)),
+    fetchAppointments: () => dispatch(fetchAppointments()),
+    fetchEstablishments: () => dispatch(fetchEstablishments())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(MatchContainer)

@@ -138,7 +138,7 @@ a:hover {
   transition: all 0.4s ease 0s;
 }
 
-div.center-app > button {
+div.center-app > button, div.center-app > a >button {
   color: #494949 !important;
   text-transform: uppercase;
   text-decoration: none;
@@ -152,7 +152,7 @@ div.center-app > button {
   display: block;
 }
 
-div.center-app > button:hover {
+div.center-app > button:hover, div.center-app > a >button:hover {
   color: #ffffff !important;
   background: #f35e19;
   /* border-color: #f6b93b !important; */

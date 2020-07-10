@@ -3,7 +3,6 @@ import Match from './Match'
 class Matches extends Component {
 
     render() {
-        debugger
         return (
             <div>
                 <table>
