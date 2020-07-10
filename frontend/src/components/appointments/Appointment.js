@@ -18,7 +18,7 @@ class Appointment extends Component {
         return (
             <tr id={this.props.id} status={this.props.status.toString()}>
                 <td>{new Date(this.props.when).toString().substr(0, 21)}</td>
-                <td><button onClick={event => this.handleClick(event)}>submit request</button></td>
+                <td><button onClick={event => this.handleClick(event)}>RSVP</button></td>
             </tr>
         )
     }

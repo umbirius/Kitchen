@@ -19,8 +19,12 @@ class DashboardContainer extends Component {
         if (this.props.current_user) {
             return (
                 <div className="center-app">
-                    <button>Search Date Locations</button>
-                    <button>View Matches</button>
+                    <Link to='/locations'>
+                        <button>Search Date Locations</button>
+                    </Link>
+                    <Link to='/matches'>
+                        <button>View Matches</button>
+                    </Link>
                     <button onClick={this.handleOnClick} id="log-out-button">Log Out</button>
                 </div>
             )

@@ -202,7 +202,7 @@ input, select {
 
 input:hover, select:hover {
   color: #000000 !important;
-  background: #6fd1f8;
+  background: #f1a07a;
   /* border-color: #f6b93b !important; */
   transition: all 0.4s ease 0s;
   cursor: pointer;
