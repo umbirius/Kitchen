@@ -61,24 +61,31 @@ class SignUp extends Component {
             return (
                 <div className="center-app">
                     <form onSubmit={(event) => this.handleOnSubmit(event)}>
-                        <label>Username:</label>
-                        <input
-                            type='text'
-                            id='username'
-                            onChange={(event) => this.handleOnChange(event)}
-                        />
-                        <br></br>
-                        <label>Gender</label>
-                        <select id="gender" onChange={(event) => this.handleOnChange(event)} >
-                            <option value='male'>Male</option>
-                            <option value='female'>Female</option>
-                        </select><br></br>
-                        <label>Interested In:</label>
-                        <select id="interests" onChange={(event) => this.handleOnChange(event)}>
-                            <option value='men'>Men</option>
-                            <option value='women'>Women</option>
-                            <option value='men+women'>Men and Women</option>
-                        </select><br></br>
+                            <tr>
+                                <td><label>Username:</label></td>
+                                <td><input
+                                    type='text'
+                                    id='username'
+                                    onChange={(event) => this.handleOnChange(event)}
+                                /></td>
+                            </tr>
+                            <tr>
+                                <td><label>Gender:</label></td>
+                                <td><select id="gender" onChange={(event) => this.handleOnChange(event)} >
+                                    <option value='male'>Male</option>
+                                    <option value='female'>Female</option>
+                                </select></td>
+                            </tr>
+                            <tr>
+
+                                <td><label>Interested In:</label></td>
+                                <td><select id="interests" onChange={(event) => this.handleOnChange(event)}>
+                                    <option value='men'>Men</option>
+                                    <option value='women'>Women</option>
+                                    <option value='men+women'>Men and Women</option>
+                                </select></td>
+                            </tr>
+                    
                         <input type="submit" value="Sign Up"></input>
                     </form>
                 </div>

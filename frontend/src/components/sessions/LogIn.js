@@ -54,6 +54,7 @@ class LogIn extends Component {
                             onChange={(event) => this.handleOnChange(event)}
                         />
                         <input type="submit" value="Log In"></input>
+                        
                     </form>
                 </div>
             )
