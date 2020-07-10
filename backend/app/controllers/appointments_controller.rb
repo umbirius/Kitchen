@@ -6,7 +6,6 @@ class AppointmentsController < ApplicationController
     end
 
     def update
-        byebug
         appointment = Appointment.find_by(id: params[:id])
 
         if params[:cancel] && appointment.status

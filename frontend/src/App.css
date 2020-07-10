@@ -138,7 +138,7 @@ a:hover {
   transition: all 0.4s ease 0s;
 }
 
-button {
+div.center-app > button {
   color: #494949 !important;
   text-transform: uppercase;
   text-decoration: none;
@@ -152,7 +152,7 @@ button {
   display: block;
 }
 
-button:hover {
+div.center-app > button:hover {
   color: #ffffff !important;
   background: #f35e19;
   /* border-color: #f6b93b !important; */
@@ -160,7 +160,7 @@ button:hover {
   cursor: pointer;
 }
 
-td > a > button {
+button {
   color: #494949 !important;
   text-transform: uppercase;
   text-decoration: none;
@@ -174,7 +174,7 @@ td > a > button {
   display: block;
 }
 
-td > a > button:hover {
+button:hover {
   color: #ffffff !important;
   background: #f35e19;
   /* border-color: #f6b93b !important; */
