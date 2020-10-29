@@ -20,7 +20,7 @@ class Establishments extends Component {
         const establishments = this.state.booze ? this.props.establishments.filter( e => e.drinks == "yes" ) : this.props.establishments
         return (
             <div>
-                <button onClick={this.handleClick}>Booze Only</button>
+                <button onClick={this.handleClick}>Only Drinks</button>
                 <table>
                     <thead>
                         <tr>
