@@ -9,8 +9,9 @@ class AppointmentContainer extends Component {
 
 
     componentDidMount = () => {
+        console.log("a")
         this.props.fetchAppointments()
-        
+        console.log("e")
     }
 
 

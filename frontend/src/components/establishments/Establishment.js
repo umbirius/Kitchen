@@ -5,23 +5,15 @@ import { Link } from "react-router-dom";
 
 class Establishment extends Component {
 
-    // establishments = () => {}
-    //     this.props.establishments.map( establishment => <Establishment name={est} />)
-    // }
+    state= {
+        like: 0
+    }
 
-    // handleOnClick = (event) => {
-    //     event.preventDefault()
-    //     console.log(`click ${this.props.name}`)
-    //     // window.location = `/locations/${this.props.id}`;
-    //     return (
-    //         <Link to={`/location/${this.props.id}`} establishment={this.props}>
-    //             <button>Log in</button>
-    //         </Link>
-    //     )
-
-    // }
-
-
+    handleClick = () => {
+        this.setState({
+            like: this.state.like + 1
+        })
+    }
 
     render() {
         const e = this.props
@@ -34,6 +26,9 @@ class Establishment extends Component {
                     <Link to={`/locations/${this.props.id}`} establishment={e}>
                         <button>Look for Date</button>
                     </Link>
+                </td>
+                <td>
+                    <button onClick={this.handleClick}>Like {this.state.like}</button>
                 </td>
             </tr>
         )
