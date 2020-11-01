@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import Matches from '../components/matches/Matches'
+import Matches from '../components/matches/matches'
 import { cancelAppointment } from '../actions/cancelAppointment'
 import { fetchAppointments } from '../actions/fetchAppointments'
 import { fetchEstablishments } from '../actions/fetchEstablishments'
