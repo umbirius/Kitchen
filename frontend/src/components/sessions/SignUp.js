@@ -46,10 +46,12 @@ class SignUp extends Component {
         event.preventDefault()
         let user = this.state
         this.props.newUser(user)
-        this.setState({
-            redirect: true
-        })
-
+        if (this.state.username && this.state.gender && this.state.interests) { 
+            this.setState({
+                redirect: true
+            })
+        }
+            
     }
 
     render() {
