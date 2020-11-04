@@ -11,7 +11,8 @@ class SignUp extends Component {
         username: '',
         gender: '',
         interests: '',
-        redirect: false
+        redirect: false,
+        message: ''
     }
 
     handleOnChange = event => {
@@ -35,7 +36,7 @@ class SignUp extends Component {
                 this.setState({
                     username: '',
                     gender: '',
-                    interests: ''
+                    interests: '', 
                 })
         }
 
@@ -50,6 +51,10 @@ class SignUp extends Component {
             this.setState({
                 redirect: true
             })
+        } else {
+            this.setState({
+                message: "Enter all inputs"
+            })
         }
             
     }
@@ -62,6 +67,7 @@ class SignUp extends Component {
 
             return (
                 <div className="center-app">
+                    <h4>{this.state.message}</h4>
                     <form onSubmit={(event) => this.handleOnSubmit(event)}>
                             <tr>
                                 <td><label>Username:</label></td>
