@@ -17,6 +17,9 @@ bundle install
 rails s -p 3001
 ``` 
 4. Start and install all relevant files for frontend functionality
+```javascript
+npm start
+``` 
 
 5. Access your local host and enjoy your Date-Nite!
 
