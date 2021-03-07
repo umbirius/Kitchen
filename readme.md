@@ -2,7 +2,7 @@
 
 ## About
 
-Date-Nite is a blind dating app designed to have two users match through dating and dining interests. A user would be able to select a restaurant and submit reservations requests, which would trigger a match if another user with the same dating preferences would select the same time slot. Upon a match, a user can view their match portal where a code-word would be assigned. The user would later present the code word at the dating destination to be paired. 
+Date-Nite is a blind dating app designed to have two users match through dating and dining interests. A user would be able to select a restaurant and submit reservation requests, which would trigger a match if another user with the same dating preferences would select the same time slot. Upon a match, a user can view their match portal where a code-word would be assigned. The user would later present the code word at the dating destination to be seated/meet their blind date.
 
 ## Getting Started
 
