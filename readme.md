@@ -8,20 +8,26 @@ Date-Nite is a blind dating app designed to have two users match through dating 
 
 1. fork and clone the repository
 
-2. Install all relevant gems for backend functionality
+2. cd into backend folder
+
+3. Install all relevant gems for backend functionality
 ```ruby 
 bundle install
 ```
-3. Start up your local host (note - all back end requests are directed to port 3001)
+
+4. Start up your local host (note - all back end requests are directed to port 3001)
 ```ruby 
 rails s -p 3001
 ``` 
-4. Start and install all relevant files for frontend functionality
+
+5. cd into frontend folder
+
+6. Start and install all relevant files for frontend functionality
 ```javascript
 npm start
 ``` 
 
-5. Access your local host and enjoy your Date-Nite!
+7. Access your local host and enjoy your Date-Nite!
 
 ## Contributing
 
